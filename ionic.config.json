@@ -1,0 +1,8 @@
+{
+  "name": "blogum",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "fe3db449"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "blogum",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
