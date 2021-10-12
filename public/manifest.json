@@ -3,14 +3,32 @@
   "name": "My Ionic App",
   "icons": [
     {
+      "src": "assets/icon/icon.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
       "src": "assets/icon/favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64",
       "type": "image/x-icon"
     },
     {
-      "src": "assets/icon/icon.png",
+      "src": "assets/icon/icon32.png",
       "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "32x32",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icon/icon24.png",
+      "type": "image/png",
+      "sizes": "24x24",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icon/icon16.png",
+      "type": "image/png",
+      "sizes": "16x16",
       "purpose": "maskable"
     }
   ],

@@ -104,35 +104,4 @@ self.addEventListener('message', (event) => {
 // Any other custom service worker logic can go here.
 
 
-// When there's an incoming fetch request, try and respond with a precached resource, otherwise fall back to the network
-/*self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((resp) => {
-      console.log("busco en la cache")
-      return resp || fetch(event.request).then((response) => {
-        console.log("no encontró en la cache, busca en la red")
-        return caches.open('v1').then((cache) => {
-          cache.put(event.request, response.clone());
-          console.log("Guarda en la cache", event.request)
-          return response;
-        });
-      });
-    })
-  );
-});*/
 
-registerRoute(
-  // Check to see if the request is a navigation to a new page
-  ({ url }) => url.pathname.startsWith('https://www.mockachino.com/spaces/cfc4d7cc-28e8-40'),
-  // Use the strategy
-  new NetworkFirst({
-    // Put all cached files in a cache named 'pages'
-    cacheName: 'datos',
-    plugins: [
-      // Ensure that only requests that result in a 200 status are cached
-      new CacheableResponsePlugin({
-        statuses: [200],
-      }),
-    ],
-  })
-);
