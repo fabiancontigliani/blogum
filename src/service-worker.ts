@@ -121,11 +121,12 @@ self.addEventListener('message', (event) => {
   );
 });*/
 
+
 registerRoute(
   // Check to see if the request is a navigation to a new page
-  ({ url }) => url.pathname.startsWith('https://www.mockachino.com/spaces/cfc4d7cc-28e8-40'),
+  ({ url }) => url.pathname.match(new RegExp("users")),
   // Use the strategy
-  new NetworkFirst({
+  new NetworkFirst({ //NetworkFirst - StaleWhileRevalidate
     // Put all cached files in a cache named 'pages'
     cacheName: 'datos',
     plugins: [
